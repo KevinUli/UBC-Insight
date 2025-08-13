@@ -1,0 +1,25 @@
+{
+	"title": "invalidOrderDirValue",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg",
+				"sections_instructor"
+			],
+			"ORDER": {
+				"dir": "SIDEWAYS",
+				"keys": [
+					"sections_avg",
+					"sections_instructor"
+				]
+			}
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

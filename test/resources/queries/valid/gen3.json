@@ -1,0 +1,17 @@
+{
+	"title": "Courses with 'history' in Title",
+	"input": {
+		"WHERE": {
+			"IS": { "simple_title": "*history*" }
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_title"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "33456", "simple_title": "world history" }
+	]
+}
+

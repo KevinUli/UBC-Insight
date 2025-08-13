@@ -1,0 +1,46 @@
+{
+	"title": "SELECT title, avg for all section in dataset, ordered by avg",
+	"input": {
+		"WHERE": {
+			"OR": [{
+				"GT": {
+					"dataset_avg": 50
+				}
+			}, {
+				"LT": {
+					"dataset_avg": 51
+				}
+			}]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			],
+			"ORDER": "dataset_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"dataset_avg": 1
+		},
+		{
+			"dataset_avg": 20
+		},
+		{
+			"dataset_avg": 49
+		},
+		{
+			"dataset_avg": 50
+		},
+		{
+			"dataset_avg": 50
+		},
+		{
+			"dataset_avg": 51
+		},
+		{
+			"dataset_avg": 87
+		}
+	]
+}

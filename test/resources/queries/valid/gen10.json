@@ -1,0 +1,27 @@
+{
+	"title": "NOT (LT Avg < 80 OR GT Failures > 2)",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"OR": [
+					{ "LT": { "simple_avg": 80 } },
+					{ "GT": { "simple_fail": 2 } }
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_avg", "simple_fail"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "14075", "simple_avg": 82.65, "simple_fail": 0 },
+		{ "simple_uuid": "33456", "simple_avg": 85.22, "simple_fail": 2 },
+		{ "simple_uuid": "44322", "simple_avg": 88.67, "simple_fail": 0 },
+		{ "simple_uuid": "65432", "simple_avg": 92.47, "simple_fail": 1 },
+		{ "simple_uuid": "88321", "simple_avg": 87.35, "simple_fail": 0 }
+	]
+}
+
+

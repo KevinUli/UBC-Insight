@@ -1,0 +1,28 @@
+{
+	"title": "test all fields displayable",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT": {
+						"simple_avg": 82
+					}
+				},
+				{
+					"IS": {
+						"simple_dept": "isci"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_id", "simple_title", "simple_instructor", "simple_dept", "simple_year", "simple_avg","simple_pass", "simple_fail", "simple_audit"]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "14075", "simple_id": "350", "simple_title": "darwin medicine", "simple_instructor": "",
+			"simple_dept": "isci", "simple_year": 2008, "simple_avg": 82.65, "simple_pass": 31, "simple_fail": 0, "simple_audit": 0 }
+	]
+}
+

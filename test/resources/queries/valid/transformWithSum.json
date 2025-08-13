@@ -1,0 +1,46 @@
+{
+	"title": "max on mkey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept",
+				"dataset_instructor",
+				"validKey"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_dept", "dataset_instructor"],
+			"APPLY": [
+				{
+					"validKey": {
+						"SUM": "dataset_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"dataset_dept": "cpsc",
+			"dataset_instructor": "Nick Bradley",
+			"validKey": 87
+		},
+		{
+			"dataset_dept": "cpsc",
+			"dataset_instructor": "Random Prof",
+			"validKey": 20
+		},
+		{
+			"dataset_dept": "",
+			"dataset_instructor": "",
+			"validKey": 1
+		},
+		{
+			"dataset_dept": "econ",
+			"dataset_instructor": "Random Prof",
+			"validKey": 200
+		}
+	]
+}

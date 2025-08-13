@@ -1,0 +1,21 @@
+{
+	"title": "check boundary case for GT",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"counter_avg": 120
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"counter_audit"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"counter_audit": 1000
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"title": "Courses Before 2017",
+	"input": {
+		"WHERE": {
+			"LT": { "simple_year": 2017 }
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_year"],
+			"ORDER": "simple_year"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "14075", "simple_year": 2008 },
+		{ "simple_uuid": "88321", "simple_year": 2015 },
+		{ "simple_uuid": "76543", "simple_year": 2016 }
+	]
+
+}
+

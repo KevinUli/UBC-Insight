@@ -1,0 +1,14 @@
+{
+	"title": "orderKeyNotInColumns",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type"
+			],
+			"ORDER": "rooms_lat"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

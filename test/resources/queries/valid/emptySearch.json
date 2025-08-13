@@ -1,0 +1,17 @@
+{
+	"title": "no sections found in dataset matching query",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "apsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

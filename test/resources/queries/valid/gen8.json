@@ -1,0 +1,26 @@
+{
+	"title": "NOT GT Failures Less Than or Equal to 5",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"GT": { "simple_fail": 5 }
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_fail"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "14075", "simple_fail": 0 },
+		{ "simple_uuid": "22101", "simple_fail": 3 },
+		{ "simple_uuid": "33456", "simple_fail": 2 },
+		{ "simple_uuid": "44322", "simple_fail": 0 },
+		{ "simple_uuid": "65432", "simple_fail": 1 },
+		{ "simple_uuid": "76543", "simple_fail": 5 },
+		{ "simple_uuid": "88321", "simple_fail": 0 }
+	]
+}
+
+

@@ -1,0 +1,22 @@
+{
+	"title": "invalid term (key/comparator) inside logic comparison",
+	"input": {
+		"WHERE": {
+			"NOR": [{
+				"IS": {
+					"dataset_dept": "cpsc"
+				},
+				"GT": {
+					"dataset_instructor": "random"
+				}
+			}]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

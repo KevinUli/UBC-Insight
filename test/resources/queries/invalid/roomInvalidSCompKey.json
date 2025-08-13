@@ -1,0 +1,20 @@
+{
+	"title": "Invalid scomp key",
+
+	"input": {
+
+		"WHERE": {
+			"IS": {"rooms_lat": "something"}
+
+		},
+
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		}
+	},
+
+	"errorExpected": true,
+	"expected": "InsightError"
+}

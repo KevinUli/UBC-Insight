@@ -1,0 +1,26 @@
+{
+	"title": "invalidMinWrongDataset2",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"validKey"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

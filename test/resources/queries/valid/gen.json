@@ -1,0 +1,27 @@
+{
+	"title": "Exclude Departments Starting with 'p'",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"IS": {
+					"simple_dept": "p*"
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_dept"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "12455", "simple_dept": "math" },
+		{ "simple_uuid": "14075", "simple_dept": "isci" },
+		{ "simple_uuid": "33456", "simple_dept": "hist" },
+		{ "simple_uuid": "44322", "simple_dept": "envs" },
+		{ "simple_uuid": "54032", "simple_dept": "chem" },
+		{ "simple_uuid": "76543", "simple_dept": "econ" },
+		{ "simple_uuid": "98765", "simple_dept": "cpsc" }
+	]
+}
+

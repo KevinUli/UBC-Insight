@@ -1,0 +1,37 @@
+{
+	"title": "max on mkey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept",
+				"validKey"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_dept"],
+			"APPLY": [
+				{
+					"validKey": {
+						"MAX": "dataset_avg"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"dataset_dept": "cpsc",
+			"validKey": 87
+		},
+		{
+			"dataset_dept": "",
+			"validKey": 1
+		},
+		{
+			"dataset_dept": "econ",
+			"validKey": 51
+		}
+	]
+}

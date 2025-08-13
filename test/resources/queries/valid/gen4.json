@@ -1,0 +1,18 @@
+{
+	"title": "Courses with Average Exactly 78.34",
+	"input": {
+		"WHERE": {
+			"EQ": { "simple_avg": 78.34 }
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_avg"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "22101", "simple_avg": 78.34 }
+	]
+}
+
+

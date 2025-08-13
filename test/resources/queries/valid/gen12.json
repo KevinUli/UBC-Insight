@@ -1,0 +1,72 @@
+{
+	"title": "Complex NOT with Nested Conditions and Wildcards",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"AND": [
+					{
+						"OR": [
+							{ "IS": { "simple_title": "*introduction*" } },
+							{ "IS": { "simple_instructor": "Dr. *" } }
+						]
+					},
+					{
+						"LT": { "simple_avg": 80 }
+					}
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_title", "simple_instructor", "simple_avg"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"simple_uuid": "14075",
+			"simple_title": "darwin medicine",
+			"simple_instructor": "",
+			"simple_avg": 82.65
+		},
+		{
+			"simple_uuid": "33456",
+			"simple_title": "world history",
+			"simple_instructor": "Dr. Harris",
+			"simple_avg": 85.22
+		},
+		{
+			"simple_uuid": "44322",
+			"simple_title": "environmental science",
+			"simple_instructor": "Dr. Green",
+			"simple_avg": 88.67
+		},
+		{
+			"simple_uuid": "65432",
+			"simple_title": "ethics in society",
+			"simple_instructor": "Dr. Brown",
+			"simple_avg": 92.47
+		},
+		{
+			"simple_uuid": "76543",
+			"simple_title": "microeconomics",
+			"simple_instructor": "Dr. Kim",
+			"simple_avg": 81.12
+		},
+		{
+			"simple_uuid": "88321",
+			"simple_title": "mechanics",
+			"simple_instructor": "Dr. Adams",
+			"simple_avg": 87.35
+		},
+		{
+			"simple_uuid": "98765",
+			"simple_title": "introduction to programming",
+			"simple_instructor": "Dr. Johnson",
+			"simple_avg": 84.90
+		}
+	]
+
+}
+
+

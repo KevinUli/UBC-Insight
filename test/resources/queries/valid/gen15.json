@@ -1,0 +1,19 @@
+{
+	"title": "Empty Result Set Test",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{ "GT": { "simple_avg": 95 } },
+				{ "EQ": { "simple_fail": 0 } }
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_avg", "simple_fail"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}
+
+

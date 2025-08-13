@@ -1,0 +1,22 @@
+{
+	"title": "SELECT avg, WHERE dept is cpsc",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			],
+			"ORDER": "dataset_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [{
+		"dataset_avg": 20
+	},{
+		"dataset_avg": 87
+	}]
+}

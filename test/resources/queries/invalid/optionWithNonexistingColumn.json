@@ -1,0 +1,18 @@
+{
+	"title": "SELECT non-existing column, WHERE dept is cpsc",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"random_column"
+			],
+			"ORDER": "dataset_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

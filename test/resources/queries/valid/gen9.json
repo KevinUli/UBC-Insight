@@ -1,0 +1,22 @@
+{
+	"title": "NOT NOT EQ Year Equal to 2018",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"NOT": {
+					"EQ": { "simple_year": 2018 }
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_year"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "54032", "simple_year": 2018 }
+	]
+}
+
+
