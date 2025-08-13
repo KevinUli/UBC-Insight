@@ -1,0 +1,17 @@
+{
+	"title": "scomparison invalid input string",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "***"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

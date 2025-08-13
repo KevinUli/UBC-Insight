@@ -1,0 +1,17 @@
+{
+	"title": "Query wrong key in OPTION",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_deep"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

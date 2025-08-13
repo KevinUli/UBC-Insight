@@ -1,0 +1,26 @@
+{
+	"title": "Checking if empty WHERE clause returns all results",
+	"input": {
+		"WHERE": {
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"two_year",
+				"two_avg"
+			],
+			"ORDER": "two_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"two_year": 2009,
+			"two_avg": 79.50
+		},
+		{
+			"two_year": 2008,
+			"two_avg": 82.65
+		}
+
+	]
+}

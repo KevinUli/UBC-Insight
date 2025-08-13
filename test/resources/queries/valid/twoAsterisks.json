@@ -1,0 +1,22 @@
+{
+	"title": "SELECT dept, WHERE dept contains ps",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "*ps*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			],
+			"ORDER": "dataset_dept"
+		}
+	},
+	"errorExpected": false,
+	"expected": [{
+		"dataset_dept": "cpsc"
+	}, {
+		"dataset_dept": "cpsc"
+	}]
+}

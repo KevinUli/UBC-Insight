@@ -1,0 +1,19 @@
+{
+	"title": "logic comparison invalid comparator",
+	"input": {
+		"WHERE": {
+			"NOR": [{
+				"IS": {
+					"dataset_dept": "cpsc"
+				}
+			}]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

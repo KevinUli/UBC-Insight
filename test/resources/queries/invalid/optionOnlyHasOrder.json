@@ -1,0 +1,15 @@
+{
+	"title": "options arg only has member order",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"ORDER": "sections_dept"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

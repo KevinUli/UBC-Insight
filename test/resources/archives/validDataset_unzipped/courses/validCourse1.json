@@ -1,0 +1,12 @@
+{"result": [{
+	"id": "17894",
+	"Course": "310",
+	"Title": "Software Engineering",
+	"Professor": "Nick Bradley",
+	"Subject": "cpsc",
+	"Year": "2024",
+	"Avg": "87",
+	"Pass": "142",
+	"Fail": "12",
+	"Audit": "20"
+}], "rank": 120}

@@ -1,0 +1,21 @@
+{
+	"title": "typo on group arg",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROP": ["dataset_dept"],
+			"APPLY": []
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

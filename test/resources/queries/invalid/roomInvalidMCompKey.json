@@ -1,0 +1,17 @@
+{
+	"title": "roomInvalidMCompKey",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"rooms_shortname": 18
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

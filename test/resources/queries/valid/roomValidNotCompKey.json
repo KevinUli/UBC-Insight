@@ -1,0 +1,19 @@
+{
+	"title": "roomValidNotCompKey",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"GT": {
+					"rooms_lat": 18
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

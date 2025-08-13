@@ -1,0 +1,27 @@
+{
+	"title": "SELECT dept, avg, WHERE dept is cpsc and avg is less than 50",
+	"input": {
+		"WHERE": {
+			"AND": [{
+				"IS": {
+				"dataset_dept": "cpsc"
+				}
+			}, {
+				"LT": {
+					"dataset_avg": 50
+				}
+			}]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept",
+				"dataset_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{
+		"dataset_dept": "cpsc",
+		"dataset_avg": 20
+	}]
+}

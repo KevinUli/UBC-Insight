@@ -1,0 +1,17 @@
+{
+	"title": "Query removed dataset",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"remove_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"remove_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

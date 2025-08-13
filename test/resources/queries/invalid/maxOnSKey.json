@@ -1,0 +1,27 @@
+{
+	"title": "invalid apply key",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_dept"],
+			"APPLY": [
+				{
+					"validKey": {
+						"MAX": "dataset_dept"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

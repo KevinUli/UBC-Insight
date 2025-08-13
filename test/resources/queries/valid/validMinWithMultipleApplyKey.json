@@ -1,0 +1,73 @@
+{
+	"title": "validMinWithMultipleApplyKey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"validKey",
+				"randomKey"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_type": "Case Style",
+			"validKey": 49.26044,
+			"randomKey": -123.25468
+		},
+		{
+			"rooms_type": "Open Design General Purpose",
+			"validKey": 49.26047,
+			"randomKey": -123.25741
+		},
+		{
+			"rooms_type": "Small Group",
+			"validKey": 49.26044,
+			"randomKey": -123.25741
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"validKey": 49.26044,
+			"randomKey": -123.25623
+		},
+		{
+			"rooms_type": "",
+			"validKey": 49.26767,
+			"randomKey": -123.25583
+		},
+		{
+			"rooms_type": "TBD",
+			"validKey": 49.26486,
+			"randomKey": -123.25364
+		},
+		{
+			"rooms_type": "Active Learning",
+			"validKey": 49.26048,
+			"randomKey": -123.24944
+		},
+		{
+			"rooms_type": "Studio Lab",
+			"validKey": 49.26048,
+			"randomKey": -123.25692
+		}
+	]
+}

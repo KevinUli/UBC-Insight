@@ -1,0 +1,55 @@
+{
+	"title": "SELECT uuid,pass,fail avg WHERE OR (OR (avg > 90 OR dept = 'phys')) OR (pass > 50 OR avg = 88.67)",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"OR": [
+						{
+							"GT": {
+								"simple_avg": 90
+							}
+						},
+						{
+							"IS": {
+								"simple_dept": "phys"
+							}
+						}
+					]
+				},
+				{
+					"OR": [
+						{
+							"GT": {
+								"simple_pass": 50
+							}
+						},
+						{
+							"EQ": {
+								"simple_avg": 88.67
+							}
+						}
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_pass", "simple_fail"],
+			"ORDER": "simple_pass"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+			{ "simple_uuid": "44322", "simple_pass": 45, "simple_fail": 0 },
+			{ "simple_uuid": "88321", "simple_pass": 60, "simple_fail": 0 },
+			{ "simple_uuid": "33456", "simple_pass": 75, "simple_fail": 2 },
+			{ "simple_uuid": "65432", "simple_pass": 90, "simple_fail": 1 },
+			{ "simple_uuid": "54032", "simple_pass": 100, "simple_fail": 10 },
+			{ "simple_uuid": "76543", "simple_pass": 140, "simple_fail": 5 },
+			{ "simple_uuid": "22101", "simple_pass": 150, "simple_fail": 3 },
+			{ "simple_uuid": "98765", "simple_pass": 180, "simple_fail": 7 },
+			{ "simple_uuid": "12455", "simple_pass": 200, "simple_fail": 20 }
+
+	]
+}
+

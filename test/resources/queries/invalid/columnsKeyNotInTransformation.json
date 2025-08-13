@@ -1,0 +1,28 @@
+{
+	"title": "columnsKeyNotInTransformation",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"rooms_lat",
+				"validKey"
+			],
+			"ORDER": "rooms_lat"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

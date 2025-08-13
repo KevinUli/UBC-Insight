@@ -1,0 +1,17 @@
+{
+	"title": "SELECT column from another dataset, WHERE dept is cpsc",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

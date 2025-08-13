@@ -1,0 +1,123 @@
+{
+	"title": "transformationsWithComplexOrder",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"validKey",
+				"randomKey",
+				"boo",
+				"!",
+				"hey!"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"validKey",
+					"randomKey",
+					"boo"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "rooms_lon"
+					}
+				},
+				{
+					"boo": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					"hey!": {
+						"COUNT": "rooms_furniture"
+					}
+				},
+				{
+					"!": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_type": "",
+			"validKey": 49.26767,
+			"randomKey": -123.25583,
+			"boo": 60,
+			"!": -123.26,
+			"hey!": 1
+		},
+		{
+			"rooms_type": "TBD",
+			"validKey": 49.26486,
+			"randomKey": -123.25364,
+			"boo": 232.25,
+			"!": -493,
+			"hey!": 1
+		},
+		{
+			"rooms_type": "Active Learning",
+			"validKey": 49.26048,
+			"randomKey": -123.24944,
+			"boo": 30.22,
+			"!": -1109.24,
+			"hey!": 3
+		},
+		{
+			"rooms_type": "Studio Lab",
+			"validKey": 49.26048,
+			"randomKey": -123.25692,
+			"boo": 50,
+			"!": -369.76,
+			"hey!": 1
+		},
+		{
+			"rooms_type": "Open Design General Purpose",
+			"validKey": 49.26047,
+			"randomKey": -123.25741,
+			"boo": 50.28,
+			"!": -10969.52,
+			"hey!": 6
+		},
+		{
+			"rooms_type": "Case Style",
+			"validKey": 49.26044,
+			"randomKey": -123.25468,
+			"boo": 63.54,
+			"!": -2958.06,
+			"hey!": 3
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"validKey": 49.26044,
+			"randomKey": -123.25623,
+			"boo": 161.92,
+			"!": -9367.12,
+			"hey!": 5
+		},
+		{
+			"rooms_type": "Small Group",
+			"validKey": 49.26044,
+			"randomKey": -123.25741,
+			"boo": 23.75,
+			"!": -19473.81,
+			"hey!": 4
+		}
+	]
+}

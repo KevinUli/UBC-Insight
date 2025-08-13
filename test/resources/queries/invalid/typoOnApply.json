@@ -1,0 +1,21 @@
+{
+	"title": "typo on apply arg",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_dept"],
+			"APPY": []
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

@@ -1,0 +1,17 @@
+{
+	"title": "invalid negation argument",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"dataset_avg": "50"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_avg"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

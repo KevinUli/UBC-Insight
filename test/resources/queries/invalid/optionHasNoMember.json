@@ -1,0 +1,14 @@
+{
+	"title": "options arg has no members",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
