@@ -1,0 +1,20 @@
+.DatasetTable {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	font-size: 30px;
+}
+
+table {
+	border: 2px solid forestgreen;
+	width: 500px;
+	height: 200px;
+}
+
+th {
+	border-bottom: 1px solid deepskyblue;
+}
+
+td {
+	text-align: center;
+}
