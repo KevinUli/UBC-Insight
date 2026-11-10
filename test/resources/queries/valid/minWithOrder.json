@@ -1,0 +1,60 @@
+{
+	"title": "minWithOrder",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_type",
+				"validKey"
+			],
+			"ORDER": "validKey"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"rooms_type": "Case Style",
+			"validKey": 49.26044
+		},
+		{
+			"rooms_type": "Small Group",
+			"validKey": 49.26044
+		},
+		{
+			"rooms_type": "Tiered Large Group",
+			"validKey": 49.26044
+		},
+		{
+			"rooms_type": "Open Design General Purpose",
+			"validKey": 49.26047
+		},
+		{
+			"rooms_type": "Active Learning",
+			"validKey": 49.26048
+		},
+		{
+			"rooms_type": "Studio Lab",
+			"validKey": 49.26048
+		},
+		{
+			"rooms_type": "TBD",
+			"validKey": 49.26486
+		},
+		{
+			"rooms_type": "",
+			"validKey": 49.26767
+		}
+	]
+}

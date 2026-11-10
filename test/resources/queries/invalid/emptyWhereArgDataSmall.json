@@ -1,0 +1,14 @@
+{
+	"title": "no args in where but asking for the columns of a small dataset but still throw result too large error",
+	"input": {
+		"WHERE": {
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "ResultTooLargeError"
+}

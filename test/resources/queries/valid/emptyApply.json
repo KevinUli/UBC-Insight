@@ -1,0 +1,61 @@
+{
+	"title": "emptyApply",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"LT": {
+						"rooms_lon": 100
+					}
+				},
+				{
+					"GT": {
+						"rooms_lon": 101
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"validKey",
+				"!",
+				"boo",
+				"hey!"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "rooms_lon"
+					}
+				},
+				{
+					"boo": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					"hey!": {
+						"COUNT": "rooms_furniture"
+					}
+				},
+				{
+					"!": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}

@@ -1,0 +1,19 @@
+{
+	"title": "SELECT title, WHERE title is an empty string",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_title": ""
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_title"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{
+		"dataset_title": ""
+	}]
+}

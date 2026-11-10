@@ -1,0 +1,108 @@
+{
+	"title": "Complex OR with Mixed Operators",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{ "IS": { "simple_dept": "c*" } },
+						{ "GT": { "simple_avg": 80 } }
+					]
+				},
+				{
+					"AND": [
+						{ "IS": { "simple_instructor": "Dr. *" } },
+						{ "LT": { "simple_year": 2018 } }
+					]
+				},
+				{
+					"NOT": {
+						"EQ": { "simple_fail": 0 }
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_dept", "simple_avg", "simple_instructor", "simple_year", "simple_fail"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"simple_uuid": "12455",
+			"simple_dept": "math",
+			"simple_avg": 74.56,
+			"simple_instructor": "Dr. Patel",
+			"simple_year": 2021,
+			"simple_fail": 20
+		},
+		{
+			"simple_uuid": "22101",
+			"simple_dept": "psyc",
+			"simple_avg": 78.34,
+			"simple_instructor": "Dr. Smith",
+			"simple_year": 2020,
+			"simple_fail": 3
+		},
+		{
+			"simple_uuid": "33456",
+			"simple_dept": "hist",
+			"simple_avg": 85.22,
+			"simple_instructor": "Dr. Harris",
+			"simple_year": 2019,
+			"simple_fail": 2
+		},
+		{
+			"simple_uuid": "44322",
+			"simple_dept": "envs",
+			"simple_avg": 88.67,
+			"simple_instructor": "Dr. Green",
+			"simple_year": 2017,
+			"simple_fail": 0
+		},
+		{
+			"simple_uuid": "54032",
+			"simple_dept": "chem",
+			"simple_avg": 67.89,
+			"simple_instructor": "Dr. Lee",
+			"simple_year": 2018,
+			"simple_fail": 10
+		},
+		{
+			"simple_uuid": "65432",
+			"simple_dept": "phil",
+			"simple_avg": 92.47,
+			"simple_instructor": "Dr. Brown",
+			"simple_year": 2020,
+			"simple_fail": 1
+		},
+		{
+			"simple_uuid": "76543",
+			"simple_dept": "econ",
+			"simple_avg": 81.12,
+			"simple_instructor": "Dr. Kim",
+			"simple_year": 2016,
+			"simple_fail": 5
+		},
+		{
+			"simple_uuid": "88321",
+			"simple_dept": "phys",
+			"simple_avg": 87.35,
+			"simple_instructor": "Dr. Adams",
+			"simple_year": 2015,
+			"simple_fail": 0
+		},
+		{
+			"simple_uuid": "98765",
+			"simple_dept": "cpsc",
+			"simple_avg": 84.90,
+			"simple_instructor": "Dr. Johnson",
+			"simple_year": 2022,
+			"simple_fail": 7
+		}
+	]
+
+}
+
+

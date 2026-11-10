@@ -1,0 +1,76 @@
+{
+	"title": "Comprehensive Test Query",
+	"input": {
+		"WHERE": {
+			"OR": [
+				{
+					"AND": [
+						{ "IS": { "simple_title": "*programming*" } },
+						{ "GT": { "simple_pass": 170 } }
+					]
+				},
+				{
+					"AND": [
+						{
+							"NOT": {
+								"IS": { "simple_instructor": "Dr. *" }
+							}
+						},
+						{ "EQ": { "simple_year": 2008 } }
+					]
+				},
+				{
+					"AND": [
+						{ "LT": { "simple_avg": 70 } },
+						{ "GT": { "simple_fail": 5 } }
+					]
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"simple_uuid",
+				"simple_title",
+				"simple_instructor",
+				"simple_year",
+				"simple_avg",
+				"simple_fail",
+				"simple_pass"
+			],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"simple_uuid": "14075",
+			"simple_title": "darwin medicine",
+			"simple_instructor": "",
+			"simple_year": 2008,
+			"simple_avg": 82.65,
+			"simple_fail": 0,
+			"simple_pass": 31
+		},
+		{
+			"simple_uuid": "54032",
+			"simple_title": "organic chemistry",
+			"simple_instructor": "Dr. Lee",
+			"simple_year": 2018,
+			"simple_avg": 67.89,
+			"simple_fail": 10,
+			"simple_pass": 100
+		},
+		{
+			"simple_uuid": "98765",
+			"simple_title": "introduction to programming",
+			"simple_instructor": "Dr. Johnson",
+			"simple_year": 2022,
+			"simple_avg": 84.90,
+			"simple_fail": 7,
+			"simple_pass": 180
+		}
+	]
+}
+
+
+

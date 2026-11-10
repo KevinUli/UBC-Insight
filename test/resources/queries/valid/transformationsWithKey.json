@@ -1,0 +1,114 @@
+{
+	"title": "transformationsWithKey",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"validKey",
+				"randomKey",
+				"  b  o  o  ",
+				"!",
+				" "
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"validKey",
+					"randomKey",
+					"  b  o  o  "
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "rooms_lat"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "rooms_lon"
+					}
+				},
+				{
+					"  b  o  o  ": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					" ": {
+						"COUNT": "rooms_furniture"
+					}
+				},
+				{
+					"!": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"validKey": 49.26767,
+			"randomKey": -123.25583,
+			"  b  o  o  ": 60,
+			"!": -123.26,
+			" ": 1
+		},
+		{
+			"validKey": 49.26486,
+			"randomKey": -123.25364,
+			"  b  o  o  ": 232.25,
+			"!": -493,
+			" ": 1
+		},
+		{
+			"validKey": 49.26048,
+			"randomKey": -123.24944,
+			"  b  o  o  ": 30.22,
+			"!": -1109.24,
+			" ": 3
+		},
+		{
+			"validKey": 49.26048,
+			"randomKey": -123.25692,
+			"  b  o  o  ": 50,
+			"!": -369.76,
+			" ": 1
+		},
+		{
+			"validKey": 49.26047,
+			"randomKey": -123.25741,
+			"  b  o  o  ": 50.28,
+			"!": -10969.52,
+			" ": 6
+		},
+		{
+			"validKey": 49.26044,
+			"randomKey": -123.25468,
+			"  b  o  o  ": 63.54,
+			"!": -2958.06,
+			" ": 3
+		},
+		{
+			"validKey": 49.26044,
+			"randomKey": -123.25623,
+			"  b  o  o  ": 161.92,
+			"!": -9367.12,
+			" ": 5
+		},
+		{
+			"validKey": 49.26044,
+			"randomKey": -123.25741,
+			"  b  o  o  ": 23.75,
+			"!": -19473.81,
+			" ": 4
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"title": "Query wrong key in WHERE",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_arg": 97
+			}
+		},
+		"OPTIONS": {
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

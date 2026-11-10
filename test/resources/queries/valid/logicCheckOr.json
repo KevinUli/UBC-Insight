@@ -1,0 +1,39 @@
+{
+	"title": "SELECT avg, WHERE avg is less than 50 or more than 50",
+	"input": {
+		"WHERE": {
+			"OR": [{
+				"GT": {
+					"dataset_avg": 50
+				}
+			}, {
+				"LT": {
+					"dataset_avg": 50
+				}
+			}]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"dataset_avg": 87
+		},
+		{
+			"dataset_avg": 20
+		},
+		{
+			"dataset_avg": 1
+		},
+		{
+			"dataset_avg": 49
+		},
+		{
+			"dataset_avg": 51
+		}
+	]
+}

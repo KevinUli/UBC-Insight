@@ -1,0 +1,17 @@
+{
+	"title": "scomparison invalid comparator",
+	"input": {
+		"WHERE": {
+			"AM": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

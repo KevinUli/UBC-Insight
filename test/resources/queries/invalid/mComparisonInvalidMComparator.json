@@ -1,0 +1,17 @@
+{
+	"title": "mcomparison invalid comparator",
+	"input": {
+		"WHERE": {
+			"GS": {
+				"dataset_avg": 50
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

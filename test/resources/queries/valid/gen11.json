@@ -1,0 +1,60 @@
+{
+	"title": "Deeply Nested Conditions with AND and OR",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"OR": [
+						{
+							"AND": [
+								{ "GT": { "simple_avg": 85 } },
+								{ "LT": { "simple_fail": 2 } }
+							]
+						},
+						{
+							"IS": { "simple_instructor": "*Smith" }
+						}
+					]
+				},
+				{
+					"NOT": {
+						"OR": [
+							{ "LT": { "simple_pass": 50 } },
+							{ "EQ": { "simple_year": 2018 } }
+						]
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_avg", "simple_fail", "simple_pass", "simple_year"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"simple_uuid": "22101",
+			"simple_avg": 78.34,
+			"simple_fail": 3,
+			"simple_pass": 150,
+			"simple_year": 2020
+		},
+		{
+			"simple_uuid": "65432",
+			"simple_avg": 92.47,
+			"simple_fail": 1,
+			"simple_pass": 90,
+			"simple_year": 2020
+		},
+		{
+			"simple_uuid": "88321",
+			"simple_avg": 87.35,
+			"simple_fail": 0,
+			"simple_pass": 60,
+			"simple_year": 2015
+		}
+	]
+}
+
+

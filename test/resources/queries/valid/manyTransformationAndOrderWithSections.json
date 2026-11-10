@@ -1,0 +1,776 @@
+{
+	"title": "manyTransformationAndOrderWithSections",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_instructor",
+				"validKey",
+				"randomKey",
+				"boo",
+				"!",
+				"hey!"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"randomKey",
+					"!",
+					"boo",
+					"validKey"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_instructor"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "sections_avg"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "sections_year"
+					}
+				},
+				{
+					"boo": {
+						"AVG": "sections_pass"
+					}
+				},
+				{
+					"hey!": {
+						"COUNT": "sections_avg"
+					}
+				},
+				{
+					"!": {
+						"SUM": "sections_audit"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_instructor": "tung, frederick",
+			"validKey": 73.95,
+			"randomKey": 2015,
+			"boo": 112,
+			"!": 1,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "gao, xi",
+			"validKey": 72.03,
+			"randomKey": 2015,
+			"boo": 145,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "sagaii, sara mahboubeh",
+			"validKey": 76.93,
+			"randomKey": 2015,
+			"boo": 138,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "dunfield, joshua",
+			"validKey": 84.39,
+			"randomKey": 2015,
+			"boo": 105,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "kotthoff, lars",
+			"validKey": 72.53,
+			"randomKey": 2015,
+			"boo": 97,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "holmes, reid",
+			"validKey": 79,
+			"randomKey": 2015,
+			"boo": 88,
+			"!": 0,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "berg, celina",
+			"validKey": 70.38,
+			"randomKey": 2015,
+			"boo": 87.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "awad, ahmed",
+			"validKey": 87.93,
+			"randomKey": 2015,
+			"boo": 74,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "bessmeltsev, mikhail",
+			"validKey": 78.7,
+			"randomKey": 2015,
+			"boo": 65,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "gelbart, michael",
+			"validKey": 74.23,
+			"randomKey": 2015,
+			"boo": 64,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "schmidt, mark",
+			"validKey": 80.29,
+			"randomKey": 2014,
+			"boo": 107.5,
+			"!": 39,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "khosravi, hassan",
+			"validKey": 72.4,
+			"randomKey": 2014,
+			"boo": 151.5,
+			"!": 1,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "palyart-lamarche, marc",
+			"validKey": 78.69,
+			"randomKey": 2014,
+			"boo": 156,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "cooper, kendra",
+			"validKey": 74.15,
+			"randomKey": 2014,
+			"boo": 117.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "schroeder, jonatan",
+			"validKey": 72.78,
+			"randomKey": 2014,
+			"boo": 78,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "dawson, jessica",
+			"validKey": 77.43,
+			"randomKey": 2014,
+			"boo": 60,
+			"!": 0,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "manuch, jan",
+			"validKey": 68.33,
+			"randomKey": 2013,
+			"boo": 78,
+			"!": 2,
+			"hey!": 5
+		},
+		{
+			"sections_instructor": "baniassad, elisa",
+			"validKey": 73.27,
+			"randomKey": 2013,
+			"boo": 124.3,
+			"!": 1,
+			"hey!": 10
+		},
+		{
+			"sections_instructor": "beschastnikh, ivan",
+			"validKey": 72.16,
+			"randomKey": 2013,
+			"boo": 66,
+			"!": 1,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "pai, dinesh",
+			"validKey": 76.17,
+			"randomKey": 2013,
+			"boo": 56,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "dawson, jessica;maclean, karon",
+			"validKey": 80.24,
+			"randomKey": 2013,
+			"boo": 24,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "harvey, nicholas",
+			"validKey": 76.24,
+			"randomKey": 2012,
+			"boo": 50.25,
+			"!": 0,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "kirkpatrick, bonnie;manuch, jan",
+			"validKey": 73.88,
+			"randomKey": 2012,
+			"boo": 16,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "garcia, ronald",
+			"validKey": 70.88,
+			"randomKey": 2011,
+			"boo": 43.7,
+			"!": 2,
+			"hey!": 10
+		},
+		{
+			"sections_instructor": "ernst, neil",
+			"validKey": 75.28,
+			"randomKey": 2011,
+			"boo": 93.33,
+			"!": 0,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "aiello, william",
+			"validKey": 70.9,
+			"randomKey": 2011,
+			"boo": 83.2,
+			"!": 0,
+			"hey!": 5
+		},
+		{
+			"sections_instructor": "tompkins, david a d",
+			"validKey": 76.46,
+			"randomKey": 2011,
+			"boo": 58,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "carter, paul martin",
+			"validKey": 68.57,
+			"randomKey": 2010,
+			"boo": 88.18,
+			"!": 1,
+			"hey!": 17
+		},
+		{
+			"sections_instructor": "greenstreet, mark",
+			"validKey": 75.61,
+			"randomKey": 2010,
+			"boo": 30.83,
+			"!": 1,
+			"hey!": 6
+		},
+		{
+			"sections_instructor": "darwish, mohammad mostafa",
+			"validKey": 68.77,
+			"randomKey": 2010,
+			"boo": 88,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "hutter, frank",
+			"validKey": 73.79,
+			"randomKey": 2010,
+			"boo": 74,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "warfield, andrew",
+			"validKey": 70.46,
+			"randomKey": 2010,
+			"boo": 68.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "fritz, thomas",
+			"validKey": 75.57,
+			"randomKey": 2010,
+			"boo": 62,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "luk, joseph",
+			"validKey": 77.44,
+			"randomKey": 2010,
+			"boo": 57,
+			"!": 0,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "poole, david",
+			"validKey": 75.23,
+			"randomKey": 2010,
+			"boo": 40.5,
+			"!": 0,
+			"hey!": 10
+		},
+		{
+			"sections_instructor": "van de panne, michiel",
+			"validKey": 67.85,
+			"randomKey": 2010,
+			"boo": 36,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "rees, tyrone",
+			"validKey": 73.18,
+			"randomKey": 2010,
+			"boo": 27,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "ng, raymond tak-yan",
+			"validKey": 72.15,
+			"randomKey": 2009,
+			"boo": 87,
+			"!": 6,
+			"hey!": 5
+		},
+		{
+			"sections_instructor": "evans, william",
+			"validKey": 69.59,
+			"randomKey": 2009,
+			"boo": 58.58,
+			"!": 6,
+			"hey!": 12
+		},
+		{
+			"sections_instructor": "meyer, irmtraud margret",
+			"validKey": 68.07,
+			"randomKey": 2009,
+			"boo": 57.5,
+			"!": 3,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "kiczales, gregor",
+			"validKey": 70.11,
+			"randomKey": 2009,
+			"boo": 122.87,
+			"!": 2,
+			"hey!": 15
+		},
+		{
+			"sections_instructor": "de freitas, joao",
+			"validKey": 72.65,
+			"randomKey": 2009,
+			"boo": 59.83,
+			"!": 2,
+			"hey!": 6
+		},
+		{
+			"sections_instructor": "murphy, gail",
+			"validKey": 69.6,
+			"randomKey": 2009,
+			"boo": 88.2,
+			"!": 1,
+			"hey!": 5
+		},
+		{
+			"sections_instructor": "greif, chen",
+			"validKey": 72.69,
+			"randomKey": 2009,
+			"boo": 51.6,
+			"!": 1,
+			"hey!": 5
+		},
+		{
+			"sections_instructor": "dulat, margaret",
+			"validKey": 77.5,
+			"randomKey": 2009,
+			"boo": 46,
+			"!": 1,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "pottinger, rachel",
+			"validKey": 71.89,
+			"randomKey": 2009,
+			"boo": 93.5,
+			"!": 0,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "little, james joseph",
+			"validKey": 67.79,
+			"randomKey": 2009,
+			"boo": 91.14,
+			"!": 0,
+			"hey!": 7
+		},
+		{
+			"sections_instructor": "murphy-hill, emerson",
+			"validKey": 80.18,
+			"randomKey": 2009,
+			"boo": 74,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "goldberg, murray",
+			"validKey": 69.25,
+			"randomKey": 2009,
+			"boo": 62,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "malka, lior",
+			"validKey": 71.02,
+			"randomKey": 2009,
+			"boo": 52,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "bridson, robert",
+			"validKey": 79.24,
+			"randomKey": 2009,
+			"boo": 46.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "mcgrenere, joanna",
+			"validKey": 71.18,
+			"randomKey": 2009,
+			"boo": 43.13,
+			"!": 0,
+			"hey!": 8
+		},
+		{
+			"sections_instructor": "ascher, uri michael",
+			"validKey": 70.92,
+			"randomKey": 2009,
+			"boo": 40.83,
+			"!": 0,
+			"hey!": 6
+		},
+		{
+			"sections_instructor": "vuong, son",
+			"validKey": 70.29,
+			"randomKey": 2009,
+			"boo": 34.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "maclean, karon",
+			"validKey": 75.91,
+			"randomKey": 2009,
+			"boo": 30.56,
+			"!": 0,
+			"hey!": 16
+		},
+		{
+			"sections_instructor": "wagner, alan",
+			"validKey": 72.91,
+			"randomKey": 2009,
+			"boo": 27.88,
+			"!": 0,
+			"hey!": 8
+		},
+		{
+			"sections_instructor": "kirkpatrick, david",
+			"validKey": 68.77,
+			"randomKey": 2007,
+			"boo": 37.75,
+			"!": 5,
+			"hey!": 8
+		},
+		{
+			"sections_instructor": "munzner, tamara",
+			"validKey": 64.62,
+			"randomKey": 2007,
+			"boo": 54.78,
+			"!": 4,
+			"hey!": 9
+		},
+		{
+			"sections_instructor": "allen, meghan",
+			"validKey": 68.13,
+			"randomKey": 2007,
+			"boo": 72.96,
+			"!": 2,
+			"hey!": 25
+		},
+		{
+			"sections_instructor": "conati, cristina",
+			"validKey": 67.48,
+			"randomKey": 2007,
+			"boo": 56.1,
+			"!": 2,
+			"hey!": 10
+		},
+		{
+			"sections_instructor": "carenini, giuseppe",
+			"validKey": 69.91,
+			"randomKey": 2007,
+			"boo": 39.29,
+			"!": 2,
+			"hey!": 14
+		},
+		{
+			"sections_instructor": "doucet, arnaud",
+			"validKey": 68.4,
+			"randomKey": 2007,
+			"boo": 29,
+			"!": 2,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "hoos, holger",
+			"validKey": 81.28,
+			"randomKey": 2007,
+			"boo": 25.67,
+			"!": 2,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "tsiknis, georgios",
+			"validKey": 70.42,
+			"randomKey": 2007,
+			"boo": 91.44,
+			"!": 1,
+			"hey!": 35
+		},
+		{
+			"sections_instructor": "eiselt, kurt",
+			"validKey": 71.6,
+			"randomKey": 2007,
+			"boo": 78.42,
+			"!": 1,
+			"hey!": 19
+		},
+		{
+			"sections_instructor": "wolfman, steven",
+			"validKey": 65.1,
+			"randomKey": 2007,
+			"boo": 76.17,
+			"!": 1,
+			"hey!": 23
+		},
+		{
+			"sections_instructor": "voll, kimberly",
+			"validKey": 73.07,
+			"randomKey": 2007,
+			"boo": 68.08,
+			"!": 1,
+			"hey!": 12
+		},
+		{
+			"sections_instructor": "hu, alan",
+			"validKey": 65.26,
+			"randomKey": 2007,
+			"boo": 58.23,
+			"!": 1,
+			"hey!": 13
+		},
+		{
+			"sections_instructor": "mackworth, alan",
+			"validKey": 72.21,
+			"randomKey": 2007,
+			"boo": 49.75,
+			"!": 1,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "krasic, charles",
+			"validKey": 72.79,
+			"randomKey": 2007,
+			"boo": 38.67,
+			"!": 1,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "sheffer, alla",
+			"validKey": 67.62,
+			"randomKey": 2007,
+			"boo": 36.5,
+			"!": 1,
+			"hey!": 4
+		},
+		{
+			"sections_instructor": "murphy, kevin",
+			"validKey": 76.75,
+			"randomKey": 2007,
+			"boo": 29,
+			"!": 1,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "belleville, patrice",
+			"validKey": 66.34,
+			"randomKey": 2007,
+			"boo": 104.87,
+			"!": 0,
+			"hey!": 30
+		},
+		{
+			"sections_instructor": "lakshmanan, laks",
+			"validKey": 68.76,
+			"randomKey": 2007,
+			"boo": 96.57,
+			"!": 0,
+			"hey!": 7
+		},
+		{
+			"sections_instructor": "feeley, michael",
+			"validKey": 70.53,
+			"randomKey": 2007,
+			"boo": 90.59,
+			"!": 0,
+			"hey!": 17
+		},
+		{
+			"sections_instructor": "shepherd, david",
+			"validKey": 74.45,
+			"randomKey": 2007,
+			"boo": 83,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "woodham, robert",
+			"validKey": 72.48,
+			"randomKey": 2007,
+			"boo": 75.67,
+			"!": 0,
+			"hey!": 6
+		},
+		{
+			"sections_instructor": "knorr, edwin max",
+			"validKey": 69.58,
+			"randomKey": 2007,
+			"boo": 73.37,
+			"!": 0,
+			"hey!": 19
+		},
+		{
+			"sections_instructor": "acton, donald",
+			"validKey": 68.54,
+			"randomKey": 2007,
+			"boo": 67.54,
+			"!": 0,
+			"hey!": 25
+		},
+		{
+			"sections_instructor": "hutchinson, norman",
+			"validKey": 67.91,
+			"randomKey": 2007,
+			"boo": 64.23,
+			"!": 0,
+			"hey!": 13
+		},
+		{
+			"sections_instructor": "leyton-brown, kevin",
+			"validKey": 73.25,
+			"randomKey": 2007,
+			"boo": 63.33,
+			"!": 0,
+			"hey!": 6
+		},
+		{
+			"sections_instructor": "wohlstadter, eric",
+			"validKey": 74.25,
+			"randomKey": 2007,
+			"boo": 62,
+			"!": 0,
+			"hey!": 7
+		},
+		{
+			"sections_instructor": "ascher, uri michael;greif, chen",
+			"validKey": 74.46,
+			"randomKey": 2007,
+			"boo": 46,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "mitchell, ian",
+			"validKey": 64,
+			"randomKey": 2007,
+			"boo": 44.2,
+			"!": 0,
+			"hey!": 10
+		},
+		{
+			"sections_instructor": "heidrich, wolfgang",
+			"validKey": 74.22,
+			"randomKey": 2007,
+			"boo": 35.5,
+			"!": 0,
+			"hey!": 2
+		},
+		{
+			"sections_instructor": "de volder, kris",
+			"validKey": 74.06,
+			"randomKey": 2007,
+			"boo": 21.67,
+			"!": 0,
+			"hey!": 3
+		},
+		{
+			"sections_instructor": "friedman, joel",
+			"validKey": 70.03,
+			"randomKey": 2007,
+			"boo": 19.92,
+			"!": 0,
+			"hey!": 12
+		},
+		{
+			"sections_instructor": "booth, kellogg",
+			"validKey": 83.67,
+			"randomKey": 2007,
+			"boo": 15,
+			"!": 0,
+			"hey!": 1
+		},
+		{
+			"sections_instructor": "",
+			"validKey": 64,
+			"randomKey": 1900,
+			"boo": 87.17,
+			"!": 139,
+			"hey!": 422
+		}
+	]
+}

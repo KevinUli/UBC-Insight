@@ -1,0 +1,12 @@
+{"result": [{
+	"id": "499",
+	"Course": "e",
+	"Title": "Random Course",
+	"Professor": "Random Prof",
+	"Subject": "econ",
+	"Year": "2050",
+	"Avg": "49",
+	"Pass": "56",
+	"Fail": "200",
+	"Audit": "12"
+}], "rank": 0}

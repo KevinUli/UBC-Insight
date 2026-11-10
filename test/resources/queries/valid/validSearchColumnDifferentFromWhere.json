@@ -1,0 +1,21 @@
+{
+	"title": "SELECT dept, avg, WHERE id is 310",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_id": "310"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept",
+				"dataset_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{
+		"dataset_dept": "cpsc",
+		"dataset_avg": 87
+	}]
+}

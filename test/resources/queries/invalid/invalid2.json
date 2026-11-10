@@ -1,0 +1,13 @@
+{
+	"title": "Query wrong wildcard",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "c*c"
+			}
+		},
+		"OPTIONS": {}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

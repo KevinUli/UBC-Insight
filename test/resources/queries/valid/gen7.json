@@ -1,0 +1,27 @@
+{
+	"title": "NOT EQ Year Not Equal to 2020",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"EQ": { "simple_year": 2020 }
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_year"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "12455", "simple_year": 2021 },
+		{ "simple_uuid": "14075", "simple_year": 2008 },
+		{ "simple_uuid": "33456", "simple_year": 2019 },
+		{ "simple_uuid": "44322", "simple_year": 2017 },
+		{ "simple_uuid": "54032", "simple_year": 2018 },
+		{ "simple_uuid": "76543", "simple_year": 2016 },
+		{ "simple_uuid": "88321", "simple_year": 2015 },
+		{ "simple_uuid": "98765", "simple_year": 2022 }
+	]
+}
+
+

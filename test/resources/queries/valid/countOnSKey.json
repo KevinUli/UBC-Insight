@@ -1,0 +1,31 @@
+{
+	"title": "max on mkey",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"validKey"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_dept"],
+			"APPLY": [
+				{
+					"validKey": {
+						"COUNT": "dataset_dept"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"validKey": 1
+		}
+	]
+}

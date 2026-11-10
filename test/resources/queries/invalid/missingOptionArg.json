@@ -1,0 +1,12 @@
+{
+	"title": "missing option argument",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			}
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

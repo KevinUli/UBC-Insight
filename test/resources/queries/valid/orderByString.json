@@ -1,0 +1,205 @@
+{
+	"title": "Queries order by string",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "cpsc"
+					}
+				},
+				{
+					"GT": {
+						"sections_avg": 90
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_uuid",
+				"sections_title"
+			],
+			"ORDER": "sections_title"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_uuid": "61180",
+			"sections_title": "alg in bioin"
+		},
+		{
+			"sections_uuid": "61179",
+			"sections_title": "alg in bioin"
+		},
+		{
+			"sections_uuid": "83520",
+			"sections_title": "artif intell 2"
+		},
+		{
+			"sections_uuid": "83519",
+			"sections_title": "artif intell 2"
+		},
+		{
+			"sections_uuid": "90630",
+			"sections_title": "comp comm protcl"
+		},
+		{
+			"sections_uuid": "90629",
+			"sections_title": "comp comm protcl"
+		},
+		{
+			"sections_uuid": "62469",
+			"sections_title": "comp comm protcl"
+		},
+		{
+			"sections_uuid": "62468",
+			"sections_title": "comp comm protcl"
+		},
+		{
+			"sections_uuid": "90608",
+			"sections_title": "computl ling 1"
+		},
+		{
+			"sections_uuid": "90607",
+			"sections_title": "computl ling 1"
+		},
+		{
+			"sections_uuid": "83492",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "83491",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "62447",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "62446",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "61187",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "61186",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "49957",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "49956",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "46757",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "46756",
+			"sections_title": "honours thesis"
+		},
+		{
+			"sections_uuid": "1386",
+			"sections_title": "m.sc major essay"
+		},
+		{
+			"sections_uuid": "1385",
+			"sections_title": "m.sc major essay"
+		},
+		{
+			"sections_uuid": "62475",
+			"sections_title": "machine learn i"
+		},
+		{
+			"sections_uuid": "62474",
+			"sections_title": "machine learn i"
+		},
+		{
+			"sections_uuid": "1377",
+			"sections_title": "machine learn i"
+		},
+		{
+			"sections_uuid": "1376",
+			"sections_title": "machine learn i"
+		},
+		{
+			"sections_uuid": "49967",
+			"sections_title": "software eng"
+		},
+		{
+			"sections_uuid": "49966",
+			"sections_title": "software eng"
+		},
+		{
+			"sections_uuid": "72425",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "72424",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "52067",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "52065",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "49959",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "49958",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "1355",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "1354",
+			"sections_title": "student seminar"
+		},
+		{
+			"sections_uuid": "90604",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "90603",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "83496",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "83495",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "72429",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "72428",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "46763",
+			"sections_title": "thry of automata"
+		},
+		{
+			"sections_uuid": "46762",
+			"sections_title": "thry of automata"
+		}
+	]
+}

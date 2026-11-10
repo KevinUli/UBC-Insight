@@ -1,0 +1,63 @@
+{
+	"title": "invalidSCompInMin",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_instructor",
+				"validKey",
+				"randomKey",
+				"boo",
+				"!",
+				"hey!"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"randomKey",
+					"!",
+					"boo",
+					"validKey"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_instructor"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "sections_title"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "sections_year"
+					}
+				},
+				{
+					"boo": {
+						"AVG": "sections_pass"
+					}
+				},
+				{
+					"hey!": {
+						"COUNT": "sections_avg"
+					}
+				},
+				{
+					"!": {
+						"SUM": "sections_audit"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

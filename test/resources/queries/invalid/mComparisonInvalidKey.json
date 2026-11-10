@@ -1,0 +1,17 @@
+{
+	"title": "mcomparison invalid key",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

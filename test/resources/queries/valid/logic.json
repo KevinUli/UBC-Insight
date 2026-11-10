@@ -1,0 +1,18 @@
+{
+	"title": "LT boundry",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"simple_avg": 67.89
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"simple_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": []
+}
+

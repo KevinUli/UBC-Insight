@@ -1,0 +1,62 @@
+{
+	"title": "invalidDoubleDataset",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_instructor",
+				"validKey",
+				"randomKey",
+				"boo",
+				"!",
+				"hey!"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"validKey",
+					"randomKey",
+					"boo"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_instructor"
+			],
+			"APPLY": [
+				{
+					"validKey": {
+						"MIN": "sections_avg"
+					}
+				},
+				{
+					"randomKey": {
+						"MIN": "sections_year"
+					}
+				},
+				{
+					"boo": {
+						"AVG": "sections_pass"
+					}
+				},
+				{
+					"hey!": {
+						"COUNT": "sections_avg"
+					}
+				},
+				{
+					"!": {
+						"SUM": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

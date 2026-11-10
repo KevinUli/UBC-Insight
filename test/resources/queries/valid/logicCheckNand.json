@@ -1,0 +1,55 @@
+{
+	"title": "SELECT dept, avg, WHERE avg is not gt 50 or not lt 50",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"AND": [{
+					"GT": {
+						"dataset_avg": 50
+					}
+				}, {
+					"LT": {
+						"dataset_avg": 50
+					}
+				}]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_title",
+				"dataset_avg"
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"dataset_title": "",
+			"dataset_avg": 1
+		},
+		{
+			"dataset_title": "Random Course",
+			"dataset_avg": 20
+		},
+		{
+			"dataset_title": "Random Course",
+			"dataset_avg": 49
+		},
+		{
+			"dataset_title": "Random Course",
+			"dataset_avg": 50
+		},
+		{
+			"dataset_title": "Random Course copy",
+			"dataset_avg": 50
+		},
+		{
+			"dataset_title": "Random Course",
+			"dataset_avg": 51
+		},
+		{
+			"dataset_title": "Software Engineering",
+			"dataset_avg": 87
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"title": "NOT LT Average Greater or Equal to 80",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"LT": { "simple_avg": 80 }
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid", "simple_avg"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{ "simple_uuid": "14075", "simple_avg": 82.65 },
+		{ "simple_uuid": "33456", "simple_avg": 85.22 },
+		{ "simple_uuid": "44322", "simple_avg": 88.67 },
+		{ "simple_uuid": "65432", "simple_avg": 92.47 },
+		{ "simple_uuid": "76543", "simple_avg": 81.12 },
+		{ "simple_uuid": "88321", "simple_avg": 87.35 },
+		{ "simple_uuid": "98765", "simple_avg": 84.90 }
+	]
+}
+
+

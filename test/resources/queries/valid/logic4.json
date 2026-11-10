@@ -1,0 +1,56 @@
+{
+	"title": "not_query",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"AND": [
+					{
+						"GT": {
+							"simple_avg": 85
+						}
+					},
+					{
+						"EQ": {
+							"simple_fail": 0
+						}
+					}
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": ["simple_uuid"],
+			"ORDER": "simple_uuid"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"simple_uuid": "12455"
+		},
+		{
+			"simple_uuid": "14075"
+		},
+		{"simple_uuid": "22101"},
+
+		{
+			"simple_uuid": "33456"
+		},
+		{
+			"simple_uuid": "54032"
+		},
+		{
+			"simple_uuid": "65432"
+		},
+		{
+			"simple_uuid": "76543"
+		},
+		{
+			"simple_uuid": "98765"
+		}
+	]
+}
+
+
+
+
+

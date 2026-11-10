@@ -1,0 +1,16 @@
+{
+	"title": "Query empty columns under options",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

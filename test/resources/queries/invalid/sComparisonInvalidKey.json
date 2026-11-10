@@ -1,0 +1,17 @@
+{
+	"title": "scomparison invalid key",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_avg": 30
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

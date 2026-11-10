@@ -1,0 +1,60 @@
+.input-field {
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	color: white;
+}
+
+.input-id-head {
+	position: relative;
+	top: 100px;
+	right: 300px;
+	font-size: 40px;
+	color: white;
+}
+
+.id-area {
+	position: relative;
+	top: 100px;
+	right: 300px;
+	font-size: 20px;
+	color: black;
+}
+
+.input-file-head {
+	position: relative;
+	top: 100px;
+	right: 300px;
+}
+
+.file-area {
+	position: relative;
+	top: 100px;
+	right: 240px;
+	font-size: 20px;
+	color: white;
+}
+
+.upload-button {
+	position: relative;
+	top: 100px;
+	right: 300px;
+	font-size: 50px;
+}
+
+.file-data {
+	position:relative;
+	top: 90px;
+	right: 250px;
+	font-size: 20px;
+	color: cadetblue;
+}
+
+.result-field {
+	position:relative;
+	white-space: pre-wrap;
+	right: 450px;
+}

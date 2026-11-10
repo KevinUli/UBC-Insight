@@ -1,0 +1,20 @@
+{
+	"title": "transformation missing apply arg",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"dataset_dept": "cpsc"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"dataset_avg"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": ["dataset_avg"]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}
